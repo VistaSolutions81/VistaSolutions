@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Mail, Sparkles } from "lucide-react";
-
+import Image from "next/image";
+import logo from "../../public/logo.png";
 import Countdown from "./components/Countdown";
 
 export default function Home() {
@@ -44,7 +45,7 @@ export default function Home() {
         >
 
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-black">
-            <Sparkles size={2} />
+            <img  alt= "logi" src="logo.png" className="h-6 w-6.5" />
           </div>
 
           <span className="text-xl font-bold tracking-tight">
