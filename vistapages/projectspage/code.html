@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VistaSolution - Selected Work</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Geist:wght@400;600&amp;family=Hanken+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed": "#e3e2e2",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "background": "#131313",
+                        "primary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#c4c7c8",
+                        "secondary-fixed": "#d9e2ff",
+                        "surface": "#131313",
+                        "primary": "#ffffff",
+                        "tertiary": "#ffffff",
+                        "surface-container-highest": "#353534",
+                        "on-error": "#690005",
+                        "primary-container": "#e2e2e2",
+                        "on-surface": "#e5e2e1",
+                        "secondary-container": "#0068ec",
+                        "surface-dim": "#131313",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "inverse-primary": "#5d5f5f",
+                        "surface-variant": "#353534",
+                        "on-primary": "#2f3131",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-container": "#f2f3ff",
+                        "on-primary-fixed-variant": "#454747",
+                        "outline-variant": "#444748",
+                        "on-secondary-fixed-variant": "#00429b",
+                        "surface-tint": "#c6c6c7",
+                        "error-container": "#93000a",
+                        "secondary": "#b0c6ff",
+                        "on-tertiary-container": "#646464",
+                        "on-tertiary": "#2f3131",
+                        "error": "#ffb4ab",
+                        "outline": "#8e9192",
+                        "on-primary-fixed": "#1a1c1c",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary": "#002d6e",
+                        "on-primary-container": "#636565",
+                        "surface-container": "#201f1f",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed": "#001944",
+                        "on-background": "#e5e2e1",
+                        "tertiary-container": "#e3e2e2",
+                        "secondary-fixed-dim": "#b0c6ff",
+                        "on-tertiary-fixed-variant": "#464747"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "section-gap": "160px",
+                        "gutter": "32px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "margin-mobile": "24px",
+                        "unit": "8px"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Geist"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "display-xl": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "mono-sm": ["Geist"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    fontSize: {
+                        "body-lg": ["18px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "display-xl": ["96px", { "lineHeight": "100%", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "display-lg": ["64px", { "lineHeight": "110%", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "mono-sm": ["13px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "140%", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #050505; }
+        .thin-border { border: 1px solid #252525; }
+        .thin-border-b { border-bottom: 1px solid #252525; }
+        .thin-border-t { border-top: 1px solid #252525; }
+        .masonry-grid { column-count: 1; column-gap: 32px; }
+        @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+        .masonry-item { break-inside: avoid; margin-bottom: 32px; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background-color: rgba(5, 5, 5, 0.8); }
+        .btn-primary { background-color: #F5F5F5; color: #050505; }
+        .btn-primary:hover { background-color: #0068ec; color: #ffffff; }
+        .project-card:hover .project-border { border-color: #F5F5F5; }
+    </style>
+</head>
+<body class="text-on-background min-h-screen font-body-md antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav thin-border-b">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 w-full max-w-container-max mx-auto">
+<a class="font-display-lg text-headline-md tracking-tighter text-primary font-bold" href="#">VistaSolution</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Services</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Solutions</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-primary border-b border-primary pb-1" href="#">Projects</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Case Studies</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Insights</a>
+</div>
+<button class="hidden md:block btn-primary px-6 py-3 font-label-caps text-label-caps uppercase tracking-widest transition-colors duration-300">
+                Let's Talk
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Section -->
+<header class="mb-24">
+<h1 class="font-display-xl text-headline-lg-mobile md:text-display-xl tracking-tighter text-primary mb-8 mt-12 md:mt-24">Selected Work</h1>
+<div class="flex flex-wrap gap-6 items-center thin-border-t pt-8">
+<button class="font-label-caps text-label-caps uppercase tracking-widest text-primary border-b border-primary pb-1">All</button>
+<button class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">Websites</button>
+<button class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">UI/UX</button>
+<button class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">Web Apps</button>
+<button class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">E-Commerce</button>
+</div>
+</header>
+<!-- Masonry Grid -->
+<div class="masonry-grid">
+<!-- Project 1 -->
+<article class="masonry-item project-card group cursor-pointer">
+<div class="thin-border project-border transition-colors duration-500 overflow-hidden relative group-hover:border-t-2 group-hover:border-t-primary">
+<img class="w-full h-auto object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A striking digital installation art piece featuring glowing, generative geometric shapes suspended in a vast, minimalist gallery space. The room is illuminated by high-key, soft white lighting that creates a bright, modern light-mode aesthetic. The artwork relies on a sophisticated palette of deep blacks and pristine whites, punctuated by intense accents of vibrant red. The mood is serene yet technologically advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk5-JwF3qJFW1fWIcmrAGRhWNtyvAaodZCcRvSQ2iuIIcdpHpQPE7-saBQU7jYAevbiOgPxiyAVtIE8cg4zhGVWozd6-p13GgklG7Vwe-39vaXrrdtBLcma3VhkYgYDJB3U65YyXtEHQCOdm6tg0iSeEs6ZjBDTe7RpdZdkWJo8wynKPHgqbawn2RjD2bjKLAKwtuCgHWCpPYYrHvl-kwfjkjpxUqkX8sh6GIoJ34YrA_I0ol0_IU4-Q"/>
+<div class="p-6 bg-surface-container-lowest">
+<div class="flex justify-between items-start mb-4">
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">01</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-outline">UI/UX</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Aura Financial</h2>
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant group-hover:text-primary transition-colors" href="#">
+                            View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Project 2 -->
+<article class="masonry-item project-card group cursor-pointer">
+<div class="thin-border project-border transition-colors duration-500 overflow-hidden relative group-hover:border-t-2 group-hover:border-t-primary">
+<img class="w-full h-auto object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A high-contrast, futuristic web application dashboard displayed on a sleek monitor. The UI features stark white minimalist typography on a deep black #050505 background. Architectural grid lines frame dense data visualizations and sharp-cornered panels. A subtle electric blue accent color highlights key metrics. The overall aesthetic is professional, ultra-modern, and technically sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoRWPFZywMXmf3Ftlm2-DdfCVsprM8smvUEIMdHU2vfOcpEGNITJ9gOac_vAqmWil4LTp_3_bIT18RRM_bn2rT8lA7XnvwqzdsrEkezYcb0qN8XTNt3073dqBpJA4tqo27ti9N_tj96kGCapsvrWoo-lv1wctDgWKybHZH--Cdy0n_L6rLE0b11DZ7mnir5yNeAQCqKay-CQ4TgvzlGmVT_LUX0lmHIyOQdc0JiGHv5XWebVIiKi23FQ"/>
+<div class="p-6 bg-surface-container-lowest">
+<div class="flex justify-between items-start mb-4">
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">02</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-outline">Web Apps</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Nexus Platform</h2>
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant group-hover:text-primary transition-colors" href="#">
+                            View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Project 3 -->
+<article class="masonry-item project-card group cursor-pointer">
+<div class="thin-border project-border transition-colors duration-500 overflow-hidden relative group-hover:border-t-2 group-hover:border-t-primary">
+<img class="w-full h-auto object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="An editorial e-commerce website layout featuring a stark monochromatic design. The screen shows a high-end fashion product surrounded by generous whitespace, creating a quiet luxury aesthetic. Thin 1px borders define the grid structure without using shadows. The primary color is a deep, immersive black (#050505) with crisp white sans-serif typography acting as high-value content framing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyzPCpRrPl-Tah2t2Vf4iNJCFVTRwBRy_fW0sGd-dW1VhOyfOBz0RIlR7cjawKGrV_0QoyHkOStiFmlrTid5s17JAkDcdhXg7ME-QYESdLprXaPHMPrO8EDIxp8J1sYCoEj4qFYvZECmex0IfDm_wFNefv1Iw0heomVCg-KnYX-NKqe-DIDSrKO9pXWkD7xMPvOB2NZLERhQ3QLRNQFg88OvS5jjTLFNKxFbWBi-NRyOEdnP1fM8N6Jw"/>
+<div class="p-6 bg-surface-container-lowest">
+<div class="flex justify-between items-start mb-4">
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">03</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-outline">E-Commerce</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Obscura Retail</h2>
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant group-hover:text-primary transition-colors" href="#">
+                            View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Project 4 -->
+<article class="masonry-item project-card group cursor-pointer">
+<div class="thin-border project-border transition-colors duration-500 overflow-hidden relative group-hover:border-t-2 group-hover:border-t-primary">
+<img class="w-full h-auto object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A minimalist architectural website design showcasing an brutalist concrete structure. The digital interface layered over the image uses stark white small-caps text and sharp, unrounded input fields. The overall mood is authoritative and precise, relying heavily on a dark monochromatic palette and strict editorial grid alignments. No soft shadows are present, only hard lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2nKa0PxMYw4TxO9Sp-P0TW8oknO29H85pxK1Q5xDPxnEU486opSigD2Ua0rlvE7c61q0euChXfGIdXwabo4B6oyXJVXiC-jfyoo7XvIA-T-AkITC6Ye8EDbHD4tTbJR_1OVxDfEWY1bH3md0XmXvEYOrYeVrVOSL2M0UkjcDl4LAD42jd3krBApGNATlhgnOgxRRUSjkAdMmEUMLwnxN7CZpzc9rmzaGKqKiQ5McPlOn37NsYRNUZEg"/>
+<div class="p-6 bg-surface-container-lowest">
+<div class="flex justify-between items-start mb-4">
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">04</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-outline">Websites</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Framework Studio</h2>
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant group-hover:text-primary transition-colors" href="#">
+                            View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-section-gap thin-border-t">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-6 mb-12 md:mb-0">
+<h2 class="font-display-xl text-headline-lg-mobile md:text-display-lg font-bold tracking-tighter text-primary mb-8">VistaSolution</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 VistaSolution. All rights reserved.</p>
+</div>
+<div class="md:col-span-6 flex flex-col md:items-end justify-between">
+<div class="flex flex-col md:flex-row gap-6 md:gap-12 mb-12 md:mb-0">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Cookie Policy</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

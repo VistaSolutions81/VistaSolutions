@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vista Solutions - Building What's Next</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;family=Sora:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#080808",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#e3e2e2",
+                        "on-error": "#690005",
+                        "inverse-primary": "#5f5e5e",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "primary": "#c9c6c5",
+                        "error": "#ffb4ab",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#0d0e0f",
+                        "surface-container": "#1f2020",
+                        "surface-tint": "#c9c6c5",
+                        "secondary-container": "#0136e8",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-tertiary-container": "#777979",
+                        "inverse-surface": "#e3e2e2",
+                        "surface-variant": "#343535",
+                        "secondary-fixed": "#dee0ff",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "primary-fixed": "#e5e2e1",
+                        "outline-variant": "#444748",
+                        "on-surface-variant": "#c4c7c7",
+                        "on-secondary": "#001e91",
+                        "background": "#121414",
+                        "on-background": "#e3e2e2",
+                        "surface-container-high": "#292a2a",
+                        "tertiary": "#c6c6c7",
+                        "inverse-on-surface": "#303031",
+                        "on-secondary-container": "#bac2ff",
+                        "surface": "#121414",
+                        "secondary-fixed-dim": "#bac3ff",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-tertiary": "#2f3131",
+                        "on-secondary-fixed": "#00105c",
+                        "surface-bright": "#383939",
+                        "surface-dim": "#121414",
+                        "on-primary-container": "#7a7878",
+                        "on-primary-fixed-variant": "#474646",
+                        "secondary": "#bac3ff",
+                        "surface-container-low": "#1b1c1c",
+                        "surface-container-highest": "#343535",
+                        "tertiary-container": "#060809",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#002eca",
+                        "outline": "#8e9192",
+                        "on-primary": "#313030",
+                        "accent": "#0136e8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "display": ["Sora"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-lg": ["Sora"],
+                        "headline-md": ["Sora"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Sora"]
+                    },
+                    "fontSize": {
+                        "display": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #080808;
+            color: #e3e2e2;
+            -webkit-font-smoothing: antialiased;
+        }
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Subtle scanline effect for high-end tech feel */
+        .scanlines::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 10;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+            opacity: 0.15;
+        }
+    </style>
+</head>
+<body class="bg-primary-container text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/10 backdrop-blur-xl border-b border-outline-variant/20 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+<a class="font-display text-headline-md font-bold tracking-tighter text-on-surface" href="#">VISTA SOLUTIONS</a>
+<nav class="hidden lg:flex items-center space-x-8">
+<a class="font-body-md text-body-md text-primary border-b border-primary pb-1" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Solutions</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Projects</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Insights</a>
+</nav>
+<div class="hidden md:block">
+<a class="inline-flex items-center justify-center font-label-sm text-label-sm bg-accent text-white px-6 py-3 rounded hover:opacity-90 transition-opacity" href="#">START A PROJECT →</a>
+</div>
+<!-- Mobile Menu Button -->
+<button class="lg:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-32 pb-20 px-margin-mobile md:px-margin-desktop overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0 opacity-40 mix-blend-luminosity scanlines">
+<img alt="" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY-J46NNnftvKn6_OxNtJgX6fyL_zLyJPzHWXdgxnNjVDozlaYExCE4pcEO632vjhlP7VfqX9B5ujRw9C5S4Qw6LBugkF8-3i_SHq57gvNYM6UTmplctzL2YhSq87Fj8RAaiDbGNuIPe4HHs0YDpBBf9AREHZnbxAUWi_EYI9wv-vCd2HzypA457jvavydmhF_C91cVEOEFtq9nmO17ZehYbUr0WYI1vPadeieMSDPRvG6yy3tdhQ5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container via-primary-container/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container via-primary-container/50 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto grid grid-cols-12 gap-gutter mt-16 md:mt-24">
+<div class="col-span-12 lg:col-span-10 xl:col-span-9 reveal-up">
+<h1 class="font-display text-headline-lg-mobile md:text-display text-on-surface mb-8 leading-tight">
+                        BUILDING<br/>
+                        WHAT'S <span class="text-on-surface-variant">NEXT.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
+                        Technology, digital experiences and intelligent solutions engineered to move businesses forward. We architect the future with precision.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<a class="inline-flex items-center justify-center font-label-sm text-label-sm bg-accent text-white px-8 py-4 rounded hover:bg-opacity-90 transition-all border border-transparent" href="#">
+                            EXPLORE SOLUTIONS →
+                        </a>
+<a class="inline-flex items-center justify-center font-label-sm text-label-sm bg-transparent text-on-surface px-8 py-4 rounded border border-outline-variant/30 hover:border-outline-variant transition-all" href="#">
+                            VIEW OUR WORK →
+                        </a>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-12 left-margin-mobile md:left-margin-desktop z-10 flex items-center gap-4 animate-pulse opacity-60">
+<span class="font-label-sm text-label-sm tracking-widest text-on-surface-variant uppercase">Scroll to explore</span>
+<div class="w-12 h-px bg-on-surface-variant/50"></div>
+</div>
+</section>
+<!-- Introduction Strip -->
+<section class="py-24 md:py-32 border-y border-outline-variant/15 bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-12 gap-gutter items-start">
+<div class="col-span-12 lg:col-span-5 reveal-up">
+<div class="inline-flex items-center gap-2 px-3 py-1 mb-8 rounded bg-on-surface/10 border border-on-surface/5">
+<span class="w-2 h-2 rounded-full bg-accent"></span>
+<span class="font-label-sm text-label-sm text-on-surface">15+ YEARS OF EXPERIENCE</span>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-7 reveal-up" style="transition-delay: 100ms;">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8">
+                            TECHNOLOGY WITH A CLEARER VIEW OF WHAT'S POSSIBLE.
+                        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                            We bridge the gap between complex engineering and elegant user experiences. Our structural approach to software development ensures scalable, secure, and performant solutions that define industry standards.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services (Numbered List) -->
+<section class="py-24 md:py-32">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16 md:mb-24 reveal-up">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-4">What We Build</h3>
+<div class="w-full h-px bg-outline-variant/20"></div>
+</div>
+<div class="flex flex-col">
+<!-- Service 01 -->
+<a class="group block py-10 md:py-12 border-b border-outline-variant/20 hover:border-accent/50 transition-colors reveal-up" href="#">
+<div class="grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-2 md:col-span-1 font-label-sm text-label-sm text-on-surface-variant group-hover:text-accent transition-colors">01</div>
+<div class="col-span-10 md:col-span-5">
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-accent transition-colors">Digital Products</h4>
+</div>
+<div class="col-span-12 md:col-span-5 mt-4 md:mt-0 md:col-start-7 text-on-surface-variant font-body-md text-body-md pr-8">
+                                End-to-end product design and engineering for platforms that demand scale and stability.
+                            </div>
+<div class="hidden md:flex col-span-1 justify-end text-on-surface-variant group-hover:text-accent transition-colors">
+<span class="material-symbols-outlined transform group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</a>
+<!-- Service 02 -->
+<a class="group block py-10 md:py-12 border-b border-outline-variant/20 hover:border-accent/50 transition-colors reveal-up" href="#">
+<div class="grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-2 md:col-span-1 font-label-sm text-label-sm text-on-surface-variant group-hover:text-accent transition-colors">02</div>
+<div class="col-span-10 md:col-span-5">
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-accent transition-colors">Software Development</h4>
+</div>
+<div class="col-span-12 md:col-span-5 mt-4 md:mt-0 md:col-start-7 text-on-surface-variant font-body-md text-body-md pr-8">
+                                Custom architectural solutions and robust backend systems tailored to enterprise requirements.
+                            </div>
+<div class="hidden md:flex col-span-1 justify-end text-on-surface-variant group-hover:text-accent transition-colors">
+<span class="material-symbols-outlined transform group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</a>
+<!-- Service 03 -->
+<a class="group block py-10 md:py-12 border-b border-outline-variant/20 hover:border-accent/50 transition-colors reveal-up" href="#">
+<div class="grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-2 md:col-span-1 font-label-sm text-label-sm text-on-surface-variant group-hover:text-accent transition-colors">03</div>
+<div class="col-span-10 md:col-span-5">
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-accent transition-colors">Enterprise Solutions</h4>
+</div>
+<div class="col-span-12 md:col-span-5 mt-4 md:mt-0 md:col-start-7 text-on-surface-variant font-body-md text-body-md pr-8">
+                                System integration, modernization, and digital transformation for established organizations.
+                            </div>
+<div class="hidden md:flex col-span-1 justify-end text-on-surface-variant group-hover:text-accent transition-colors">
+<span class="material-symbols-outlined transform group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- Featured Projects -->
+<section class="py-24 md:py-32 bg-surface-container-lowest border-t border-outline-variant/15">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 reveal-up">
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-4">Selected Work</h3>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">
+                            ARCHITECTURAL<br/>INTEGRITY IN CODE.
+                        </h2>
+</div>
+<a class="mt-8 md:mt-0 inline-flex items-center gap-2 font-label-sm text-label-sm text-on-surface hover:text-accent transition-colors" href="#">
+                        VIEW ALL PROJECTS <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Project 1 (Large) -->
+<div class="col-span-12 md:col-span-8 reveal-up mb-12 md:mb-0">
+<a class="group block relative overflow-hidden rounded-lg bg-surface border border-outline-variant/10 aspect-[4/3] md:aspect-[16/9]" href="#">
+<img alt="" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4nameSWibgXVeod6UQs74LQ2LnISIhe5Y6KXJOdVEz4PLzSVWWaUq_09LC9pnyR-1nawIq6DxGkZU2JJiaijwsjo5_7yDCcdvKt-fr1oi21Odu210qHRxs-QRaqfOu_ydanfWbiv77h8C6WBP3XFtQ-eu7oQpUaRXfco9Xnq4Ifpx2EYh94c6Dk8JVjy-7iag0lx598e7cWWAgAOX6gjSc9HoH3zESs4PZIkYnlGIc9OtDfW6slll"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8 flex flex-col md:flex-row justify-between items-start md:items-end">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-2 block">Fintech / Enterprise</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Global Ledger Platform</h4>
+</div>
+<div class="mt-4 md:mt-0 font-label-sm text-label-sm text-on-surface opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center gap-2">
+                                    VIEW CASE STUDY <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</a>
+</div>
+<!-- Project 2 (Small) -->
+<div class="col-span-12 md:col-span-4 reveal-up md:mt-24">
+<a class="group block relative overflow-hidden rounded-lg bg-surface border border-outline-variant/10 aspect-square" href="#">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out" data-alt="A macro shot of a sleek, dark-themed server rack with glowing blue LED indicator lights. High contrast, precise engineering aesthetic, minimal depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL1x8XPkGVNp6l9ONFPnWkLLNyBsDh8IL4UXQ7VvDqP9DBKVhLLaoaJ1yV23uHI24OLZVlXlRpQLBBYy5yiZomjTnach_EpEpMGFpla4vtb-FzGGykZU_FX6wIywnfvtWW9M7bip7rg7v3bZO8_xVa8Yc99C2L2CreBQCazgrVgzjnFDbBScFmHuGFFBWJ1sJ2olqVXFi19qY1n-FlEtO8GBuFLEfnvG8Zs7I8GPjLpTBzr8jau6Zy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 right-0 p-6">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-2 block">Cloud Infrastructure</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Nexus Data Sync</h4>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Closing CTA -->
+<section class="relative py-32 md:py-48 overflow-hidden border-t border-outline-variant/20">
+<div class="absolute inset-0 z-0 opacity-30 mix-blend-screen">
+<img alt="" class="w-full h-full object-cover object-bottom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBspxFTNpfMOBpgTRABSyJ3ZpWUx3KreLkpaRoUnO8j2jDBQoLF2v0amAtL8wASxRzpH9yDGiBXUF2Ogph-mwZhh0C29JJgsDFO_P4U89ZeieDk2UP_tOZzCtdobVgSKHPhDnEHekKjEZGHM-MAl4aEaY3oPGYb6FqRgVurSPygv51YGAJmmdhxGFjbwKP95b3K8mNztmVqTaGbMMUS9uCoYUSt8h2yI3vQFWfDXOP7ZPGO-LE6Fj_0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center reveal-up">
+<h2 class="font-display text-headline-lg-mobile md:text-display text-on-surface mb-8">
+                    HAVE AN IDEA<br/>WORTH BUILDING?
+                </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto mb-12">
+                    Let's engineer a solution that scales with your ambition.
+                </p>
+<a class="inline-flex items-center justify-center font-label-sm text-label-sm bg-accent text-white px-10 py-5 rounded hover:bg-opacity-90 transition-all border border-transparent" href="#">
+                    CONTACT OUR TEAM →
+                </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container w-full py-20 border-t border-outline-variant/15 transition-all duration-200">
+<div class="grid grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-12 md:col-span-4 mb-12 md:mb-0">
+<div class="font-display text-headline-md text-on-surface font-bold tracking-tighter mb-6">VISTA SOLUTIONS</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mb-8">
+                    Architectural Integrity in Technology. We build digital structures that last.
+                </p>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                    © 2024 Vista Solutions.
+                </div>
+</div>
+<div class="col-span-6 md:col-span-2 md:col-start-7">
+<h5 class="font-label-sm text-label-sm text-on-surface mb-6 uppercase tracking-widest">Company</h5>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">About</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Services</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Projects</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Insights</a></li>
+</ul>
+</div>
+<div class="col-span-6 md:col-span-2">
+<h5 class="font-label-sm text-label-sm text-on-surface mb-6 uppercase tracking-widest">Legal</h5>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Cookies</a></li>
+</ul>
+</div>
+<div class="col-span-12 md:col-span-2 mt-12 md:mt-0">
+<h5 class="font-label-sm text-label-sm text-on-surface mb-6 uppercase tracking-widest">Social</h5>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">LinkedIn</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Twitter</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Instagram</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-up').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Trigger immediately for items already in view
+            setTimeout(() => {
+                document.querySelectorAll('.reveal-up').forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if(rect.top < window.innerHeight) {
+                        el.classList.add('is-visible');
+                    }
+                });
+            }, 100);
+        });
+    </script>
+</body></html>

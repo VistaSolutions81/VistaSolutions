@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Case Studies - VistaSolution</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Geist:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e3e2e2",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "background": "#131313",
+                        "primary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#c4c7c8",
+                        "secondary-fixed": "#d9e2ff",
+                        "surface": "#131313",
+                        "primary": "#ffffff",
+                        "tertiary": "#ffffff",
+                        "surface-container-highest": "#353534",
+                        "on-error": "#690005",
+                        "primary-container": "#e2e2e2",
+                        "on-surface": "#e5e2e1",
+                        "secondary-container": "#0068ec",
+                        "surface-dim": "#131313",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "inverse-primary": "#5d5f5f",
+                        "surface-variant": "#353534",
+                        "on-primary": "#2f3131",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-container": "#f2f3ff",
+                        "on-primary-fixed-variant": "#454747",
+                        "outline-variant": "#444748",
+                        "on-secondary-fixed-variant": "#00429b",
+                        "surface-tint": "#c6c6c7",
+                        "error-container": "#93000a",
+                        "secondary": "#b0c6ff",
+                        "on-tertiary-container": "#646464",
+                        "on-tertiary": "#2f3131",
+                        "error": "#ffb4ab",
+                        "outline": "#8e9192",
+                        "on-primary-fixed": "#1a1c1c",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary": "#002d6e",
+                        "on-primary-container": "#636565",
+                        "surface-container": "#201f1f",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed": "#001944",
+                        "on-background": "#e5e2e1",
+                        "tertiary-container": "#e3e2e2",
+                        "secondary-fixed-dim": "#b0c6ff",
+                        "on-tertiary-fixed-variant": "#464747"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "160px",
+                        "gutter": "32px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "margin-mobile": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Geist"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "display-xl": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "mono-sm": ["Geist"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "display-xl": ["96px", { "lineHeight": "100%", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "display-lg": ["64px", { "lineHeight": "110%", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "mono-sm": ["13px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "140%", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            color: #e5e2e1;
+        }
+        .border-thin {
+            border-color: #252525;
+            border-width: 1px;
+        }
+        .btn-primary {
+            background-color: #F5F5F5;
+            color: #050505;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0068ec;
+            color: #ffffff;
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: #F5F5F5;
+            border: 1px solid #252525;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            border-color: #F5F5F5;
+        }
+        .card-hover:hover {
+            border-color: #444748;
+            border-top: 2px solid #0068ec;
+        }
+        .nav-blur {
+            background-color: rgba(19, 19, 19, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #252525; 
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #444748; 
+        }
+    </style>
+</head>
+<body class="font-body-md antialiased min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 nav-blur border-b border-thin border-outline-variant flat no shadows transition-all duration-300">
+<div class="flex justify-between items-center px-margin-desktop py-6 w-full max-w-container-max mx-auto hidden md:flex">
+<div class="font-display-lg text-headline-md tracking-tighter text-primary font-bold">
+                VistaSolution
+            </div>
+<nav class="flex gap-8 items-center">
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Services</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Solutions</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Projects</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-primary border-b border-primary pb-1 Active: scale-95 transition-transform" href="#">Case Studies</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Insights</a>
+</nav>
+<button class="font-label-caps text-label-caps uppercase tracking-widest btn-secondary px-6 py-3 hover:bg-primary hover:text-on-primary transition-all duration-300">Let's Talk</button>
+</div>
+<!-- Mobile Header (Simplified) -->
+<div class="flex justify-between items-center px-margin-mobile py-4 w-full md:hidden border-b border-thin">
+<div class="font-display-lg text-headline-md tracking-tighter text-primary font-bold">
+                VistaSolution
+            </div>
+<button class="text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow pt-32 md:pt-48 pb-section-gap">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-10 md:col-start-2 text-center">
+<p class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant mb-6 inline-block border-b border-thin pb-2">Our Work</p>
+<h1 class="font-display-xl text-display-lg md:text-display-xl tracking-tighter text-primary font-bold mb-8 leading-tight">
+                        From Business Challenges to <span class="text-secondary-container">Digital Outcomes.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                        We don't just build software; we architect solutions that redefine industries. Explore our portfolio of high-impact transformations.
+                    </p>
+</div>
+</div>
+<!-- Filter Bar -->
+<div class="border-y border-thin py-6 mt-16 overflow-x-auto whitespace-nowrap hide-scrollbar">
+<div class="flex gap-8 px-4 md:px-0">
+<button class="font-label-caps text-label-caps uppercase tracking-widest text-primary border-b border-primary pb-1">All Cases</button>
+<button class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">FinTech</button>
+<button class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">Healthcare</button>
+<button class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">Logistics</button>
+<button class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">Retail</button>
+</div>
+</div>
+</section>
+<!-- Case Studies List (Magazine Editorial Style) -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col gap-section-gap">
+<!-- Case Study 01 -->
+<article class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center group cursor-pointer relative pb-section-gap border-b border-thin">
+<div class="md:col-span-5 order-2 md:order-1 flex flex-col">
+<div class="flex items-center gap-4 mb-8">
+<span class="font-mono-sm text-mono-sm text-secondary-container">01</span>
+<div class="h-px bg-[#252525] flex-grow"></div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant">Global Logistics Inc.</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary mb-6 group-hover:text-secondary-container transition-colors duration-300">
+                        Supply Chain Visibility Platform Redesign
+                    </h2>
+<div class="grid grid-cols-2 gap-4 mb-8 border-t border-thin pt-4">
+<div>
+<p class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-2">Industry</p>
+<p class="font-body-md text-body-md text-primary">Logistics</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-2">Outcome</p>
+<p class="font-body-md text-body-md text-primary">+40% Efficiency</p>
+</div>
+</div>
+<div class="space-y-6 mb-10">
+<div>
+<h3 class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-2">The Challenge</h3>
+<p class="font-body-md text-body-md text-on-surface line-clamp-3">
+                                Legacy systems were causing massive data silos, leading to delayed shipments and inaccurate tracking for enterprise clients. The client needed a unified dashboard to orchestrate global operations in real-time.
+                            </p>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps uppercase tracking-widest text-primary hover:text-secondary-container transition-colors w-max group/btn" href="#">
+                        Read Full Case
+                        <span class="material-symbols-outlined transform group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="md:col-span-7 order-1 md:order-2 h-[50vh] md:h-[70vh] w-full bg-surface-container border border-thin overflow-hidden relative">
+<div class="absolute inset-0 bg-[#050505]/20 group-hover:bg-transparent transition-colors z-10"></div>
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0" data-alt="A highly detailed, futuristic supply chain dashboard UI interface displayed on a large, sleek dark monitor. The UI features complex data visualizations, glowing neon blue logistics nodes, and real-time global tracking maps set against a high-contrast dark mode background. The scene is shot with precise, dramatic studio lighting emphasizing the clean, minimalist lines of the digital outcome. The overall mood is authoritative and technologically advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4cy7NNcgWA5xbSGWTQf4yBamzqbJJJiCa_sUKaGYdZe2UexdeWiZEFqWs-xBsQzOFdVa8NlD7ouW0ldwRG909Lvc_wPX-0eeWWHDx4QqBtdp6CynWTegpiacpbg1GMqUVW1mSmfqfAhbDvXCoPIGR2iyINah4tL4Id13ycfesViPDF_aciQqDH9L9vQs-Y9ROYkwTH-BtDdBCSxyJJNaAIKJgb814rKmbtxpAfW4MrxvEuMICQ77B6w"/>
+</div>
+</article>
+<!-- Case Study 02 (Reversed layout) -->
+<article class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center group cursor-pointer relative pb-section-gap border-b border-thin">
+<div class="md:col-span-7 order-1 md:order-1 h-[50vh] md:h-[70vh] w-full bg-surface-container border border-thin overflow-hidden relative">
+<div class="absolute inset-0 bg-[#050505]/20 group-hover:bg-transparent transition-colors z-10"></div>
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0" data-alt="An abstract, high-end visualization of financial data flows. Bright, luminous metallic silver and electric blue geometric particles streaming through a dark, monolithic tech environment. The aesthetic is clean, sharp, and minimalist, representing secure banking transactions. The lighting is cinematic, highlighting the precision and structural integrity of the digital architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiM1FBCTHRvC9Ux_tOPm5ArKhAg7QFzXZ_GdP3BKMRikDk0jYj5hN1-0YBDuu4ER5CildRW1aa-6nPe15XMo9rJugMk6adb3XsfHD57jIYHS5hJC4DpnlcXd2m4itCCN8vu7vpYvQ5vQ_8GqtFXL1tla-sMIi133t4qLev9o7hhExpMCxs1VIQCGFe7x23SC05Svzqg7ReIlMcEo62RAJml_OuU3H0iBXk44F9t8z5J8QtTaqHScMcWw"/>
+</div>
+<div class="md:col-span-5 order-2 md:order-2 flex flex-col md:pl-12">
+<div class="flex items-center gap-4 mb-8">
+<span class="font-mono-sm text-mono-sm text-secondary-container">02</span>
+<div class="h-px bg-[#252525] flex-grow"></div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant">Apex Financial</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary mb-6 group-hover:text-secondary-container transition-colors duration-300">
+                        Next-Gen Wealth Management App
+                    </h2>
+<div class="grid grid-cols-2 gap-4 mb-8 border-t border-thin pt-4">
+<div>
+<p class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-2">Industry</p>
+<p class="font-body-md text-body-md text-primary">FinTech</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-2">Outcome</p>
+<p class="font-body-md text-body-md text-primary">2.5M New Users</p>
+</div>
+</div>
+<div class="space-y-6 mb-10">
+<div>
+<h3 class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-2">The Challenge</h3>
+<p class="font-body-md text-body-md text-on-surface line-clamp-3">
+                                A traditional wealth management firm needed to attract a younger demographic without alienating their core, high-net-worth clientele. The existing app was complex, intimidating, and visually dated.
+                            </p>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps uppercase tracking-widest text-primary hover:text-secondary-container transition-colors w-max group/btn" href="#">
+                        Read Full Case
+                        <span class="material-symbols-outlined transform group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+</section>
+<!-- CTA Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-section-gap">
+<div class="border border-thin p-12 md:p-24 text-center bg-surface-container-low flex flex-col items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 opacity-10 pointer-events-none group-hover:opacity-20 transition-opacity">
+<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<rect fill="none" height="40" width="40"></rect>
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e2e2e2" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<h2 class="font-display-lg text-display-lg font-bold text-primary mb-6 relative z-10 tracking-tighter">Ready to transform?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10 relative z-10">Let's discuss how we can architect a solution tailored to your specific business challenges.</p>
+<button class="btn-primary font-label-caps text-label-caps uppercase tracking-widest px-8 py-4 relative z-10 flex items-center gap-2">
+                    Start a Project
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-section-gap border-t border-thin border-outline-variant flat no shadows">
+<div class="grid grid-cols-12 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-12 md:col-span-4 mb-12 md:mb-0">
+<div class="font-display-xl text-display-lg font-bold tracking-tighter text-primary mb-6">
+                    VistaSolution
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    Architecting high-end digital solutions for modern enterprise challenges.
+                </p>
+</div>
+<div class="col-span-12 md:col-span-8 flex flex-col md:flex-row justify-between md:justify-end gap-12 md:gap-24">
+<div>
+<h4 class="font-label-caps text-label-caps uppercase tracking-widest text-primary mb-6 border-b border-thin pb-2 inline-block">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:opacity-80 transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:opacity-80 transition-all" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:opacity-80 transition-all" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="col-span-12 border-t border-thin mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 VistaSolution. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">language</span></a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

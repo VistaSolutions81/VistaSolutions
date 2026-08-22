@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services - VistaSolution</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;family=Geist:wght@400;600&amp;family=Hanken+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e3e2e2",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "background": "#131313",
+                        "primary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#c4c7c8",
+                        "secondary-fixed": "#d9e2ff",
+                        "surface": "#131313",
+                        "primary": "#ffffff",
+                        "tertiary": "#ffffff",
+                        "surface-container-highest": "#353534",
+                        "on-error": "#690005",
+                        "primary-container": "#e2e2e2",
+                        "on-surface": "#e5e2e1",
+                        "secondary-container": "#0068ec",
+                        "surface-dim": "#131313",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "inverse-primary": "#5d5f5f",
+                        "surface-variant": "#353534",
+                        "on-primary": "#2f3131",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-container": "#f2f3ff",
+                        "on-primary-fixed-variant": "#454747",
+                        "outline-variant": "#444748",
+                        "on-secondary-fixed-variant": "#00429b",
+                        "surface-tint": "#c6c6c7",
+                        "error-container": "#93000a",
+                        "secondary": "#b0c6ff",
+                        "on-tertiary-container": "#646464",
+                        "on-tertiary": "#2f3131",
+                        "error": "#ffb4ab",
+                        "outline": "#8e9192",
+                        "on-primary-fixed": "#1a1c1c",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary": "#002d6e",
+                        "on-primary-container": "#636565",
+                        "surface-container": "#201f1f",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed": "#001944",
+                        "on-background": "#e5e2e1",
+                        "tertiary-container": "#e3e2e2",
+                        "secondary-fixed-dim": "#b0c6ff",
+                        "on-tertiary-fixed-variant": "#464747"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "160px",
+                        "gutter": "32px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "margin-mobile": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Geist"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "display-xl": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "mono-sm": ["Geist"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "160%", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "160%", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "display-xl": ["96px", {"lineHeight": "100%", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "110%", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "mono-sm": ["13px", {"lineHeight": "150%", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "140%", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #050505; color: #ffffff; }
+        .grid-bg {
+            background-size: 32px 32px;
+            background-image: 
+                linear-gradient(to right, #111111 1px, transparent 1px),
+                linear-gradient(to bottom, #111111 1px, transparent 1px);
+        }
+        .thin-border { border: 1px solid #252525; }
+        .border-b-thin { border-bottom: 1px solid #252525; }
+        .border-t-thin { border-top: 1px solid #252525; }
+        
+        .service-row {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .service-row:hover {
+            background-color: #0a0a0a;
+            padding-left: 24px;
+        }
+        .service-row:hover .service-arrow {
+            transform: translateX(10px);
+            color: #ffffff;
+        }
+        .service-arrow {
+            transition: transform 0.3s ease, color 0.3s ease;
+            color: #555555;
+        }
+        
+        /* Custom image placeholder hover */
+        .service-img-wrapper img {
+            transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+        .service-row:hover .service-img-wrapper img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-body-lg antialiased selection:bg-primary selection:text-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant">
+<div class="flex justify-between items-center px-margin-desktop py-6 w-full max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md tracking-tighter text-primary font-bold">VistaSolution</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-primary border-b border-primary pb-1" href="#">Services</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Solutions</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Projects</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Case Studies</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Insights</a>
+</div>
+<button class="hidden md:block bg-primary text-background font-label-caps text-label-caps uppercase tracking-widest px-6 py-3 hover:opacity-90 transition-opacity">Let's Talk</button>
+<!-- Mobile Menu Icon (Placeholder for interaction) -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[120px]">
+<!-- Hero Section -->
+<section class="grid-bg min-h-[60vh] flex flex-col justify-end pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-b-thin">
+<div class="max-w-4xl">
+<h1 class="font-display-xl text-display-xl text-primary leading-none mb-gutter">
+                    Digital Services<br/>Designed Around<br/>Your Business.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-8">
+                    We deliver high-end digital solutions combining precise engineering with cinematic aesthetics. Our methodologies ensure scalable, high-performance outcomes for ambitious enterprises.
+                </p>
+</div>
+</section>
+<!-- Services Editorial List -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="flex justify-between items-end border-b-thin pb-8 mb-16">
+<h2 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Our Capabilities</h2>
+<span class="font-mono-sm text-mono-sm text-outline-variant">Total: 08</span>
+</div>
+<div class="flex flex-col">
+<!-- 01 UI/UX Design -->
+<article class="service-row group border-b-thin py-16 flex flex-col md:flex-row gap-8 items-start relative cursor-pointer">
+<div class="font-mono-sm text-mono-sm text-outline-variant w-16 pt-2">01</div>
+<div class="flex-grow flex flex-col justify-between h-full">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-6">UI/UX Design</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Creating intuitive, architectural interfaces that balance high-end aesthetics with seamless user journeys. We focus on structural clarity and micro-interactions.</p>
+</div>
+<div class="w-full md:w-1/3 aspect-[4/3] overflow-hidden service-img-wrapper thin-border bg-surface-container-low hidden md:block">
+<img alt="UI/UX Design Abstract" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500" data-alt="A highly abstract, dark minimalist representation of digital interface design. Floating glowing wireframes and clean typography on a deep black background, illuminated by a single sharp studio light. Cinematic high contrast, authoritative tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5F1VtGRm2xvx0chMFp6nTkgPtR4uCyWWHq-EYKPM01QW7javjeLxuex8TFxD0IzBje1d-bMYPY8bgc3DcGjNRikokA0rJSskpsYR1zD__tpGHDjAx3qfTA5r2fDNRWX6eRVS8EIYSt2fTasgLL3B3qCKjRwCtEuez4wi0n8ijmXDsJ_IjJX8dOxpCEzvAu0P-Pt0jURaLY5RRwYIs9RDnEkCZNLLV88N9eZzkEFhuDQMFnV4dM_PxEw"/>
+</div>
+<div class="hidden md:flex items-center justify-center w-16 h-full absolute right-0 top-0 bottom-0 pointer-events-none">
+<span class="material-symbols-outlined text-[32px] service-arrow">arrow_forward</span>
+</div>
+</article>
+<!-- 02 Web Design & Development -->
+<article class="service-row group border-b-thin py-16 flex flex-col md:flex-row gap-8 items-start relative cursor-pointer">
+<div class="font-mono-sm text-mono-sm text-outline-variant w-16 pt-2">02</div>
+<div class="flex-grow flex flex-col justify-between h-full">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-6">Web Design &amp; Development</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Building robust digital presences. Our development process prioritizes extreme performance, exacting grid alignment, and flawless responsive execution.</p>
+</div>
+<div class="w-full md:w-1/3 aspect-[4/3] overflow-hidden service-img-wrapper thin-border bg-surface-container-low hidden md:block">
+<img alt="Web Development Abstract" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500" data-alt="Dark, moody macro photography of illuminated server racks or intricate digital circuitry intersecting with precise architectural grid lines. Deep blacks, subtle blue accents, communicating stable, high-end web development infrastructure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtqjKuoX3O-sDIMVivGSaNb31v94d9CDyBFQZaX38i6ZJXrJxncaXw9EasPsP15_DyAE29GS4LJ6gX4UpkFUM4q0Ptt9HnBcfvjbUlUez4ZK6BCMWfLpPdYKe-cwkhxTTD3znQfKgpNXqnaPO_RXF5gsV7ELJkSgNOXZul0NJh9uCe2tapxam0xZNSBo_zYS3TPQVfXu7R1dO9t_1UqkaSFdZyyqUBYjNJCGsWn8ozqGyX6Vd2PevnPg"/>
+</div>
+<div class="hidden md:flex items-center justify-center w-16 h-full absolute right-0 top-0 bottom-0 pointer-events-none">
+<span class="material-symbols-outlined text-[32px] service-arrow">arrow_forward</span>
+</div>
+</article>
+<!-- 03 Web Application Development -->
+<article class="service-row group border-b-thin py-16 flex flex-col md:flex-row gap-8 items-start relative cursor-pointer">
+<div class="font-mono-sm text-mono-sm text-outline-variant w-16 pt-2">03</div>
+<div class="flex-grow flex flex-col justify-between h-full">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-6">Web Application Development</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Engineering complex, state-driven platforms. We architect scalable solutions handling vast data flows while maintaining an impossibly clean frontend experience.</p>
+</div>
+<div class="w-full md:w-1/3 aspect-[4/3] overflow-hidden service-img-wrapper thin-border bg-surface-container-low hidden md:block">
+<img alt="Web App Data Flow" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500" data-alt="A futuristic visualization of data flow in a web application. Thin, glowing white and grey lines moving through a geometric 3D space on a pitch-black background. Conveying complexity managed with quiet luxury and precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZTJblTZvmIoeNjgUm7rcgIhwjD9siGoZwxG3VsG-E20Pvb7eGhI3BpXoUHevlCam27nxBPPcLrMNg2MwXcD5I6VF-kjT03Onmmii_nugGYHSXRceNgxXhevOIAe4_X3Oqwe3mp7imKR01cppB1v2s5XoPY1EoZa8EfrEcTYK_Ix0zUg90yEg65udKavC1sULi5Q3cLID5xO0cw_zkktNhRSdmvVhJFsj_WTpwoq6MIYgT9t4hf9KZHA"/>
+</div>
+<div class="hidden md:flex items-center justify-center w-16 h-full absolute right-0 top-0 bottom-0 pointer-events-none">
+<span class="material-symbols-outlined text-[32px] service-arrow">arrow_forward</span>
+</div>
+</article>
+</div>
+<div class="mt-16 flex justify-center">
+<button class="border border-[#252525] bg-transparent text-primary font-label-caps text-label-caps uppercase tracking-widest px-8 py-4 hover:border-primary transition-colors">View All Services</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-6 flex flex-col justify-between">
+<div class="font-display-xl text-display-lg font-bold tracking-tighter text-primary mb-8 md:mb-0">VistaSolution</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-auto">© 2024 VistaSolution. All rights reserved.</p>
+</div>
+<div class="md:col-span-3 flex flex-col gap-4 pt-4 border-t-thin md:border-none">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Cookie Policy</a>
+</div>
+<div class="md:col-span-3 flex flex-col items-start md:items-end pt-4 border-t-thin md:border-none">
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-primary flex items-center gap-2 group" href="#">
+                    Back to top
+                    <span class="material-symbols-outlined text-[16px] group-hover:-translate-y-1 transition-transform">arrow_upward</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,28 @@
+{
+  "name": "vistasolutions-backend",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "nodemon --watch src -e ts --exec tsx src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "db:migrate": "prisma migrate dev --name init",
+    "db:generate": "prisma generate",
+    "db:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "@prisma/client": "^5.14.0",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.27.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "nodemon": "^3.1.0",
+    "prisma": "^5.14.0",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5"
+  }
+}
